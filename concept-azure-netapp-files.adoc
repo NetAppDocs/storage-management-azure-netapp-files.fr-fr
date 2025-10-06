@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-azure-netapp-files.html 
 keywords: azure netapp files, cost, price, features, azure netapp files features, anf, supported regions, azure regions, azure netapp files regions 
-summary: Azure NetApp Files permet aux entreprises de migrer et d’exécuter leurs applications critiques, gourmandes en performances et sensibles à la latence, dans Azure sans avoir besoin de refactoriser pour le cloud. 
+summary: Azure NetApp Files permet aux entreprises de migrer et d’exécuter leurs applications stratégiques gourmandes en performances et sensibles à la latence dans Azure sans avoir besoin de refactoriser pour le cloud. 
 ---
 = En savoir plus sur Azure NetApp Files
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Azure NetApp Files permet aux entreprises de migrer et d’exécuter le
 
 
 [role="lead"]
-Azure NetApp Files permet aux entreprises de migrer et d’exécuter leurs applications critiques, gourmandes en performances et sensibles à la latence, dans Azure sans avoir besoin de refactoriser pour le cloud.
+Azure NetApp Files permet aux entreprises de migrer et d’exécuter leurs applications stratégiques gourmandes en performances et sensibles à la latence dans Azure sans avoir besoin de refactoriser pour le cloud.
 
 
 
@@ -27,9 +27,9 @@ Azure NetApp Files permet aux entreprises de migrer et d’exécuter leurs appli
 
 
 
-=== Fonctionnalités supplémentaires dans la console NetApp
+=== Fonctionnalités supplémentaires dans la NetApp Console
 
-* Migrez les données NFS ou SMB vers Azure NetApp Files directement depuis la console NetApp .  Les migrations de données sont optimisées par NetApp Copy and Sync.
+* Migrez les données NFS ou SMB vers Azure NetApp Files directement depuis la NetApp Console.  Les migrations de données sont optimisées par NetApp Copy and Sync.
 +
 https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html["En savoir plus sur la copie et la synchronisation"^]
 
@@ -41,15 +41,15 @@ https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.htm
 
 
 
-== Console NetApp
+== NetApp Console
 
-Azure NetApp Files est accessible via la console NetApp .
+Azure NetApp Files est accessible via la NetApp Console.
 
-La console NetApp fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.
+La NetApp Console fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.
 
 Vous n'avez pas besoin de licence ni d'abonnement pour commencer à utiliser NetApp Console et vous n'encourez des frais que lorsque vous devez déployer des agents de console dans votre cloud pour garantir la connectivité à vos systèmes de stockage ou à vos services de données NetApp . Cependant, certains services de données NetApp accessibles depuis la console sont sous licence ou basés sur un abonnement.
 
-En savoir plus sur lelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["Console NetApp"^] .
+En savoir plus sur lelink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["NetApp Console"^] .
 
 
 
@@ -75,7 +75,7 @@ Pour les problèmes de support technique associés à Azure NetApp Files, utilis
 
 == Liens connexes
 
-* link:https://bluexp.netapp.com/azure-netapp-files["Site Web de la console NetApp : Azure NetApp Files"^]
+* link:https://bluexp.netapp.com/azure-netapp-files["Site Web de la NetApp Console : Azure NetApp Files"^]
 * link:https://learn.microsoft.com/azure/azure-netapp-files/["Documentation Azure NetApp Files"^]
 * link:https://docs.netapp.com/us-en/bluexp-copy-sync/index.html["Copier et synchroniser la documentation"^]
 

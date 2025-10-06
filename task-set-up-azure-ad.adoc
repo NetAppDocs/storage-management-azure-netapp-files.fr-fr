@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-set-up-azure-ad.html 
 keywords: azure netapp files, azure netapp files permissions, azure permissions, active directory, application, ad application, ad app, app, service principal 
-summary: La console NetApp a besoin d’autorisations pour configurer et gérer Azure NetApp Files.  Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une application Microsoft Entra et en obtenant les informations d’identification Azure dont la console a besoin. 
+summary: La NetApp Console a besoin d’autorisations pour configurer et gérer Azure NetApp Files.  Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une application Microsoft Entra et en obtenant les informations d’identification Azure dont la console a besoin. 
 ---
 = Configurer une application Microsoft Entra
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: La console NetApp a besoin d’autorisations pour configurer et gérer 
 
 
 [role="lead"]
-La console NetApp a besoin d’autorisations pour configurer et gérer Azure NetApp Files.  Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une application Microsoft Entra et en obtenant les informations d’identification Azure dont la console a besoin.
+La NetApp Console a besoin d’autorisations pour configurer et gérer Azure NetApp Files.  Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une application Microsoft Entra et en obtenant les informations d’identification Azure dont la console a besoin.
 
 
 
@@ -146,7 +146,7 @@ Lorsque vous créez le système Azure NetApp Files , vous êtes invité à séle
 . Dans la navigation de gauche de la console, sélectionnez **Administration** > **Informations d’identification**.
 . Sélectionnez *Ajouter des informations d’identification* et suivez les étapes de l’assistant.
 +
-.. *Emplacement des informations d'identification* : sélectionnez *Microsoft Azure > Console NetApp *.
+.. *Emplacement des informations d'identification* : Sélectionnez *Microsoft Azure > NetApp Console*.
 .. *Définir les informations d'identification* : saisissez les informations sur le principal du service Microsoft Entra qui accorde les autorisations requises :
 +
 *** Secret client

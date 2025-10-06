@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: whats-new.html 
 keywords: 'what"s new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, netapp console' 
-summary: Découvrez les nouveautés concernant la prise en charge Azure NetApp Files dans la console NetApp . 
+summary: Découvrez les nouveautés concernant la prise en charge Azure NetApp Files dans la NetApp Console. 
 ---
 = Quoi de neuf
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Découvrez les nouveautés concernant la prise en charge Azure NetApp F
 
 
 [role="lead"]
-Découvrez les nouveautés d’ Azure NetApp Files dans la console NetApp .
+Découvrez les nouveautés d’ Azure NetApp Files dans la NetApp Console.
 
 
 
@@ -26,9 +26,9 @@ Découvrez les nouveautés d’ Azure NetApp Files dans la console NetApp .
 
 BlueXP a été renommé et repensé pour mieux refléter son rôle dans la gestion de votre infrastructure de données.
 
-La console NetApp offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
+La NetApp Console offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.
 
-Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notes de version de la console NetApp"] .
+Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notes de version de la NetApp Console"] .
 
 
 
@@ -38,7 +38,7 @@ Pour plus de détails sur ce qui a changé, consultez le https://docs.netapp.com
 
 === Fonctionnalités réseau désormais prises en charge dans BlueXP
 
-Lors de la configuration d’un volume dans Azure NetApp Files à partir de BlueXP, vous pouvez désormais indiquer les fonctionnalités réseau.  Cela correspond aux fonctionnalités disponibles dans Azure NetApp Files natif.
+Lors de la configuration d’un volume dans Azure NetApp Files à partir de BlueXP, vous pouvez désormais indiquer les fonctionnalités réseau. Cela correspond aux fonctionnalités disponibles dans Azure NetApp Files natif.
 
 
 

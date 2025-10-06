@@ -66,7 +66,7 @@ image:screenshot-protocol-smb.png["Une capture d'écran des champs requis pour c
 
 
 . Si vous souhaitez que ce volume soit créé sur la base d’un instantané d’un volume existant, sélectionnez l’instantané dans la liste déroulante Nom de l’instantané.
-. Sélectionnez *Ajouter un volume*.
+. Sélectionnez *Ajouter du volume*.
 . Après avoir créé le volume, vous devez procéder à<<Monter des volumes,monter le volume cloud>> .
 
 
@@ -74,10 +74,10 @@ image:screenshot-protocol-smb.png["Une capture d'écran des champs requis pour c
 
 == Monter des volumes
 
-Accédez aux instructions de montage depuis la console NetApp afin de pouvoir monter le volume sur un hôte.
+Accédez aux instructions de montage depuis la NetApp Console afin de pouvoir monter le volume sur un hôte.
 
 .Étapes
-. Dans la console NetApp , ouvrez le système Azure NetApp Files .
+. Dans la NetApp Console, ouvrez le système Azure NetApp Files .
 . Déplacez le curseur sur le volume puis sélectionnez les trois points `...` à côté de l'état du volume.
 . Sélectionnez **Monter le volume**.
 +
