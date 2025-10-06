@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: task-create-system.html 
+keywords: azure netapp files, create working environment, working environment, system, netapp console 
+summary: Après avoir configuré une application Microsoft Entra, créez un système Azure NetApp Files dans la console NetApp afin de pouvoir commencer à créer les volumes dont vous avez besoin. 
+---
+= Créer un système Azure NetApp Files dans la console NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Après avoir configuré une application Microsoft Entra et ajouté les informations d’identification à la console NetApp , créez un système Azure NetApp Files afin de pouvoir commencer à créer les volumes dont vous avez besoin.
+
+.Étapes
+. Depuis la page Systèmes, sélectionnez *Ajouter un système*.
+. Sélectionnez *Microsoft Azure*.
+. À côté d’ Azure NetApp Files, sélectionnez *Découvrir*.
+. Sur la page Détails, saisissez un nom de système et sélectionnez les informations d’identification que vous avez précédemment configurées.
+. Sélectionnez *Continuer*.
+
+
+.Résultat
+Vous disposez désormais d’un système Azure NetApp Files .
+
+image:screenshot-azure-netapp-files-system.gif["Une capture d’écran d’un système Azure NetApp Files ."]
+
+.Quelle est la prochaine étape ?
+link:task-create-volumes.html["Commencez à créer et à gérer des volumes"] .

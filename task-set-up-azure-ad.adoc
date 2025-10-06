@@ -1,0 +1,163 @@
+---
+sidebar: sidebar 
+permalink: task-set-up-azure-ad.html 
+keywords: azure netapp files, azure netapp files permissions, azure permissions, active directory, application, ad application, ad app, app, service principal 
+summary: La console NetApp a besoin d’autorisations pour configurer et gérer Azure NetApp Files.  Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une application Microsoft Entra et en obtenant les informations d’identification Azure dont la console a besoin. 
+---
+= Configurer une application Microsoft Entra
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La console NetApp a besoin d’autorisations pour configurer et gérer Azure NetApp Files.  Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une application Microsoft Entra et en obtenant les informations d’identification Azure dont la console a besoin.
+
+
+
+== Étape 1 : Créer l'application
+
+Créez une application Microsoft Entra et un principal de service que la console peut utiliser pour le contrôle d’accès basé sur les rôles.
+
+.Avant de commencer
+Vous devez disposer des autorisations appropriées dans Azure pour créer une application Active Directory et attribuer l’application à un rôle. Pour plus de détails, reportez-vous à https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#required-permissions/["Documentation Microsoft Azure : autorisations requises"^] .
+
+.Étapes
+. Depuis le portail Azure, ouvrez le service *Microsoft Entra ID*.
++
+image:screenshot_azure_ad.png["Une capture d’écran qui montre le service Active Directory dans Microsoft Azure."]
+
+. Dans le menu, sélectionnez *Inscriptions d'applications*.
+. Créer l'application :
++
+.. Sélectionnez *Nouvelle inscription*.
+.. Précisez les détails de l'application :
++
+*** *Nom*: Saisissez un nom pour l'application.
+*** *Type de compte* : Sélectionnez un type de compte (n'importe lequel fonctionnera avec la console).
+*** *URI de redirection*: Vous pouvez laisser ce champ vide.
+
+
+.. Sélectionnez *S'inscrire*.
+
+
+. Copiez l'*ID d'application (client)* et l'*ID de répertoire (locataire)*.
++
+image:screenshot_anf_app_ids.gif["Une capture d'écran qui montre l'ID d'application (client) et l'ID de répertoire (locataire) pour une application dans Microsoft Entra ID."]
+
++
+Lorsque vous créez le système Azure NetApp Files dans la console, vous devez fournir l’ID d’application (client) et l’ID de répertoire (locataire) de l’application. La console utilise les identifiants pour se connecter par programmation.
+
+. Créez un secret client pour l'application afin que la console puisse l'utiliser pour s'authentifier avec Microsoft Entra ID :
++
+.. Sélectionnez *Certificats et secrets > Nouveau secret client*.
+.. Fournissez une description du secret et une durée.
+.. Sélectionnez *Ajouter*.
+.. Copiez la valeur du secret client.
++
+image:screenshot_anf_client_secret.gif["Une capture d’écran du portail Azure qui affiche un secret client pour le principal du service Microsoft Entra."]
+
+
+
+
+
+.Résultat
+Votre application AD est maintenant configurée et vous devez avoir copié l'ID de l'application (client), l'ID du répertoire (locataire) et la valeur du secret client.  Vous devez saisir ces informations dans la console lorsque vous ajoutez un système Azure NetApp Files .
+
+
+
+== Étape 2 : Attribuer l’application à un rôle
+
+Vous devez lier le principal de service à votre abonnement Azure et lui attribuer un rôle personnalisé disposant des autorisations requises.
+
+.Étapes
+. https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles["Créer un rôle personnalisé dans Azure"^] .
++
+Les étapes suivantes décrivent comment créer le rôle à partir du portail Azure.
+
++
+.. Ouvrez l'abonnement et sélectionnez *Contrôle d'accès (IAM)*.
+.. Sélectionnez *Ajouter > Ajouter un rôle personnalisé*.
++
+image:screenshot_azure_access_control.gif["Une capture d’écran qui montre les étapes pour ajouter un rôle personnalisé dans le portail Azure."]
+
+.. Dans l’onglet *Bases*, saisissez un nom et une description pour le rôle.
+.. Sélectionnez *JSON* puis *Modifier* qui apparaît en haut à droite du format JSON.
+.. Ajoutez les autorisations suivantes sous _actions_ :
++
+[source, json]
+----
+"actions": [
+    "Microsoft.NetApp/*",
+    "Microsoft.Resources/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/resources/read",
+    "Microsoft.Resources/subscriptions/resourceGroups/write",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Network/virtualNetworks/subnets/read",
+    "Microsoft.Insights/Metrics/Read"
+    ],
+----
+.. Sélectionnez *Enregistrer* > *Suivant* puis *Créer*.
+
+
+. Affectez l’application au rôle que vous venez de créer :
++
+.. Depuis le portail Azure, ouvrez *Abonnements*.
+.. Sélectionnez l'abonnement.
+.. Sélectionnez *Contrôle d'accès (IAM) > Ajouter > Ajouter une attribution de rôle*.
+.. Dans l'onglet *Rôle*, sélectionnez le rôle personnalisé que vous avez créé puis *Suivant*.
+.. Dans l'onglet *Membres*, procédez comme suit :
++
+*** Gardez *Utilisateur, groupe ou principal du service* sélectionné.
+*** Sélectionnez *Sélectionner les membres*.
++
+image:screenshot-azure-anf-role.png["Capture d’écran du portail Azure qui affiche l’onglet Membres lors de l’ajout d’un rôle à une application."]
+
+*** Recherchez le nom de l'application.
++
+Voici un exemple :
+
++
+image:screenshot_anf_app_role.png["Une capture d’écran du portail Azure qui montre le formulaire Ajouter une attribution de rôle dans le portail Azure."]
+
+*** Sélectionnez l'application puis *Sélectionner*.
+*** Sélectionnez *Suivant*.
+
+
+.. Sélectionnez *Réviser + attribuer*.
++
+Le principal de service de la console dispose désormais des autorisations Azure requises pour cet abonnement.
+
+
+
+
+
+
+
+== Étape 3 : ajouter les informations d’identification à la console
+
+Lorsque vous créez le système Azure NetApp Files , vous êtes invité à sélectionner les informations d’identification associées au principal du service.  Vous devez ajouter ces informations d’identification à la console avant de créer le système.
+
+.Étapes
+. Dans la navigation de gauche de la console, sélectionnez **Administration** > **Informations d’identification**.
+. Sélectionnez *Ajouter des informations d’identification* et suivez les étapes de l’assistant.
++
+.. *Emplacement des informations d'identification* : sélectionnez *Microsoft Azure > Console NetApp *.
+.. *Définir les informations d'identification* : saisissez les informations sur le principal du service Microsoft Entra qui accorde les autorisations requises :
++
+*** Secret client
+*** ID de l'application (client)
+*** ID du répertoire (locataire)
++
+Vous auriez dû capturer cette information lorsque vous<<create-AD-application,créé l'application AD>> .
+
+
+
+.. *Révision* : Confirmez les détails des nouvelles informations d'identification, puis sélectionnez *Ajouter*.
+
+
+

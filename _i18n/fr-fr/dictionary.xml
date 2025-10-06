@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="860941d67aa8a8a442ba4a65191838cf" category="doc">Prise en charge des modèles de volume</block>
+  <block id="28c1b76e8b0c8f418301bc750b4e9f0e" category="paragraph">Un nouveau service de modèles d’application vous permet de configurer un modèle de volume pour Azure NetApp Files.  Le modèle devrait faciliter votre travail car certains paramètres de volume seront déjà définis dans le modèle, tels que le pool de capacité, la taille, le protocole, le VNet et le sous-réseau où le volume doit résider, etc.  Lorsqu'un paramètre est déjà prédéfini, vous pouvez simplement passer au paramètre de volume suivant.</block>
+  <block id="65d2e55c231c87b516e734e63f823cf5" category="inline-link">Découvrez les modèles d'application et comment vous pouvez les utiliser dans votre environnement</block>
+  <block id="a80baf4fa5d71b9ef418edfcaebd2759" category="list-text"><block ref="a80baf4fa5d71b9ef418edfcaebd2759" category="inline-link-rx"></block></block>
+  <block id="1636ba950a663744d701c73060d64523" category="inline-link">Découvrez comment créer un volume Azure NetApp Files à partir d'un modèle</block>
+  <block id="45ee83d3cd24c8a79ff15330399da6a7" category="list-text"><block ref="45ee83d3cd24c8a79ff15330399da6a7" category="inline-link-rx"></block></block>
+  <block id="2d177a5ce778fe0e6f460ac5e9449f84" category="doc">Les modèles de volume ne sont plus pris en charge</block>
+  <block id="14b1c6bd63866971a4cd695c3c2a3d80" category="paragraph">Vous ne pouvez plus créer un volume à partir d'un modèle. Cette action était associée au service de correction BlueXP , qui n'est plus disponible.</block>
+  <block id="bb123d17400bea06780499dfee0aa1eb" category="doc">Nouvelle autorisation requise</block>
+  <block id="19c74b0651bd4a8c13580d2b199c9dcb" category="paragraph">L'autorisation suivante est désormais requise pour gérer les volumes Azure NetApp Files à partir de BlueXP:</block>
+  <block id="d84dc0ddea3fe691a4f90418dade9248" category="paragraph">Microsoft.Network/virtualNetworks/sous-réseaux/lecture</block>
+  <block id="642c767a957f879cd5a09310eef9e35e" category="paragraph">Cette autorisation est requise pour lire un sous-réseau de réseau virtuel.</block>
+  <block id="f1c8aee091d7af06827bd81ed4e56e5a" category="paragraph">Si vous gérez actuellement Azure NetApp Files à partir de BlueXP, vous devez ajouter cette autorisation au rôle personnalisé associé à l’application Microsoft Entra que vous avez créée précédemment.</block>
+  <block id="49cb664c5b71b8da627e27d37fe9de88" category="inline-link">Découvrez comment configurer une application Microsoft Entra et afficher les autorisations de rôle personnalisées</block>
+  <block id="dd9368e78fe4f3483d324b6a988d2f87" category="paragraph"><block ref="aa8b5c9ebdcb57c9427e7bd28a70f7d0" category="inline-link-rx"></block> .</block>
+  <block id="bc2fe31b1e2682a9a79513d792e9c721" category="doc">BlueXP est désormais NetApp Console</block>
+  <block id="745be0d280d894f70c3f88e76f519456" category="paragraph">BlueXP a été renommé et repensé pour mieux refléter son rôle dans la gestion de votre infrastructure de données.</block>
+  <block id="7e4f7c37590688c797d9b40e3a3423e3" category="paragraph">La console NetApp offre une gestion centralisée des services de stockage et de données dans les environnements sur site et dans le cloud à l'échelle de l'entreprise, offrant des informations en temps réel, des flux de travail plus rapides et une administration simplifiée.</block>
+  <block id="2ef9d641d45afe99b74ad6f9a9f797ad" category="inline-link">Notes de version de la console NetApp</block>
+  <block id="9d88b780dd182bc558e5dd7624d35838" category="paragraph">Pour plus de détails sur ce qui a changé, consultez le<block ref="857ac87b6d807bceb0af9d0ff774da69" category="inline-link-rx"></block> .</block>
+  <block id="8314edb21bf66f4096470cb83529f253" category="summary">Azure NetApp Files permet aux entreprises de migrer et d’exécuter leurs applications critiques, gourmandes en performances et sensibles à la latence, dans Azure sans avoir besoin de refactoriser pour le cloud.</block>
+  <block id="8b53faee27870b72e0be69261d54a7ee" category="doc">En savoir plus sur Azure NetApp Files</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">Caractéristiques</block>
+  <block id="b4afab774d5aae036a66f2e95c63406b" category="list-text">La prise en charge de plusieurs protocoles permet aux applications Linux et Windows de s'exécuter de manière transparente dans Azure.</block>
+  <block id="86431e70f2e01436434235b95f27507f" category="list-text">Plusieurs niveaux de performances permettent un alignement étroit avec les exigences de performances de la charge de travail.</block>
+  <block id="0f5101975c831a1a6350155e818d4cbf" category="list-text">Les principales certifications, notamment SAP HANA, GDPR et HIPAA, permettent la migration des charges de travail les plus exigeantes vers Azure.</block>
+  <block id="8ffb394f66e23734c8bca5453b3c7cb9" category="section-title">Fonctionnalités supplémentaires dans la console NetApp</block>
+  <block id="5d71e19085397e9739480c0c605473b6" category="list-text">Migrez les données NFS ou SMB vers Azure NetApp Files directement depuis la console NetApp .  Les migrations de données sont optimisées par NetApp Copy and Sync.</block>
+  <block id="457a1cf5fd2ca976e622a9a914d24bad" category="inline-link">En savoir plus sur la copie et la synchronisation</block>
+  <block id="f9b2d2345f65b81f6f23df634577d11f" category="paragraph"><block ref="f9b2d2345f65b81f6f23df634577d11f" category="inline-link-rx"></block></block>
+  <block id="afbefcbdce42a0d7c65e3afe94dbbeb2" category="list-text">Grâce à la technologie basée sur l’intelligence artificielle (IA), NetApp Data Classification peut vous aider à comprendre le contexte des données et à identifier les données sensibles qui résident dans vos comptes Azure NetApp Files .</block>
+  <block id="ec140a065c9901de98431ef13e0fd87c" category="inline-link">En savoir plus sur la classification des données</block>
+  <block id="eaf2819473ed7d1df2223c31ed667b65" category="paragraph"><block ref="eaf2819473ed7d1df2223c31ed667b65" category="inline-link-rx"></block></block>
+  <block id="3c031b939f6ec312ee601d021e7a6644" category="section-title">Console NetApp</block>
+  <block id="0ab39846423ff61c3d506a74e394e89c" category="paragraph">Azure NetApp Files est accessible via la console NetApp .</block>
+  <block id="0a0979a6d279475a420ea5c279943daa" category="paragraph">La console NetApp fournit une gestion centralisée des services de stockage et de données NetApp dans les environnements sur site et cloud à l'échelle de l'entreprise. La console est requise pour accéder aux services de données NetApp et les utiliser. En tant qu'interface de gestion, il vous permet de gérer de nombreuses ressources de stockage à partir d'une seule interface. Les administrateurs de console peuvent contrôler l’accès au stockage et aux services pour tous les systèmes de l’entreprise.</block>
+  <block id="874065797510ef71853078d085cab4b0" category="paragraph">Vous n'avez pas besoin de licence ni d'abonnement pour commencer à utiliser NetApp Console et vous n'encourez des frais que lorsque vous devez déployer des agents de console dans votre cloud pour garantir la connectivité à vos systèmes de stockage ou à vos services de données NetApp . Cependant, certains services de données NetApp accessibles depuis la console sont sous licence ou basés sur un abonnement.</block>
+  <block id="e955295a860e893d00951c8233972d56" category="paragraph">En savoir plus sur le<block ref="2f3134b8970d60226f00e362a8c05c8c" category="inline-link-macro-rx"></block> .</block>
+  <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">Coût</block>
+  <block id="b8371ae9d98b29b8335a4aea09cdaff3" category="inline-link">Afficher les tarifs Azure NetApp Files</block>
+  <block id="4b3f21f8a5b6bf8c27f851053be34ac4" category="paragraph"><block ref="4b3f21f8a5b6bf8c27f851053be34ac4" category="inline-link-rx"></block></block>
+  <block id="212f67b7ceadd9d33adffc72c65fc244" category="paragraph">L’abonnement et la facturation sont gérés par le service Azure NetApp Files , et non par la console.</block>
+  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">Régions prises en charge</block>
+  <block id="d6c4ca89b6d4950d0522d6198b27af71" category="inline-link">Afficher les régions Azure prises en charge</block>
+  <block id="267c2c68dd571445da799a8af484fa6e" category="paragraph"><block ref="267c2c68dd571445da799a8af484fa6e" category="inline-link-rx"></block></block>
+  <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">Obtenir de l'aide</block>
+  <block id="edc3629fc8102552dbd6ec1e10e2b821" category="paragraph">Pour les problèmes de support technique associés à Azure NetApp Files, utilisez le portail Azure pour enregistrer une demande de support auprès de Microsoft.  Sélectionnez votre abonnement Microsoft associé et sélectionnez le nom du service * Azure NetApp Files* sous *Stockage*.  Fournissez les informations restantes requises pour créer votre demande d’assistance Microsoft.</block>
+  <block id="f6bd0d7447ff66cc6b859603a88fbde9" category="section-title">Liens connexes</block>
+  <block id="416c44c690a4e35eef01658a7b3f9145" category="inline-link-macro">Site Web de la console NetApp : Azure NetApp Files</block>
+  <block id="a1466f6534f3edf344fd80369eaa022e" category="list-text"><block ref="a1466f6534f3edf344fd80369eaa022e" category="inline-link-macro-rx"></block></block>
+  <block id="6c32a3d0f1a665987b98dde5a0f96d7d" category="inline-link-macro">Documentation Azure NetApp Files</block>
+  <block id="f7d58c22d89e4cb8d67018180686bc09" category="list-text"><block ref="f7d58c22d89e4cb8d67018180686bc09" category="inline-link-macro-rx"></block></block>
+  <block id="d1d67231275f058f0d4b1af5546d437b" category="inline-link-macro">Copier et synchroniser la documentation</block>
+  <block id="543f664393062dba6e415564999842b4" category="list-text"><block ref="543f664393062dba6e415564999842b4" category="inline-link-macro-rx"></block></block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Mentions légales</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">Les mentions légales donnent accès aux déclarations de droits d'auteur, aux marques déposées, aux brevets et bien plus encore.</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marques de commerce</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, le logo NETAPP et les marques répertoriées sur la page Marques NetApp sont des marques commerciales de NetApp, Inc. Les autres noms de sociétés et de produits peuvent être des marques commerciales de leurs propriétaires respectifs.</block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevets</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Une liste actuelle des brevets détenus par NetApp est disponible à l'adresse suivante :</block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Politique de confidentialité</block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Open source</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Les fichiers d'avis fournissent des informations sur les droits d'auteur et les licences tiers utilisés dans les logiciels NetApp .</block>
+  <block id="4fd101b562f1e5e8d87ff8710122a42f" category="inline-link">Avis concernant la console NetApp</block>
+  <block id="389273cce6176eeeeb0c3c61db63595e" category="paragraph"><block ref="389273cce6176eeeeb0c3c61db63595e" category="inline-link-rx"></block></block>
+  <block id="77f63e3628e408c02542e65d5fe4a50b" category="summary">Après avoir configuré une application Microsoft Entra, créez un système Azure NetApp Files dans la console NetApp afin de pouvoir commencer à créer les volumes dont vous avez besoin.</block>
+  <block id="c49968dd61ea6f65d5f4db3af7724481" category="doc">Créer un système Azure NetApp Files dans la console NetApp</block>
+  <block id="766887eccdacffc3ca3c19a5bf704731" category="paragraph">Après avoir configuré une application Microsoft Entra et ajouté les informations d’identification à la console NetApp , créez un système Azure NetApp Files afin de pouvoir commencer à créer les volumes dont vous avez besoin.</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
+  <block id="4dcda726deabfd502eb98c08c859f4d6" category="list-text">Depuis la page Systèmes, sélectionnez *Ajouter un système*.</block>
+  <block id="2083c7d3800af1239db96fe1162f3655" category="list-text">Sélectionnez *Microsoft Azure*.</block>
+  <block id="911c1f7504e1a21488e846b256b7bf1e" category="list-text">À côté d’ Azure NetApp Files, sélectionnez *Découvrir*.</block>
+  <block id="a116599338ea0e8c196a7b0d483995e5" category="list-text">Sur la page Détails, saisissez un nom de système et sélectionnez les informations d’identification que vous avez précédemment configurées.</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">Sélectionnez *Continuer*.</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Résultat</block>
+  <block id="f037a4c03dc40d8dbde5fa251b34e80f" category="paragraph">Vous disposez désormais d’un système Azure NetApp Files .</block>
+  <block id="3a0de2df99f7fc279dd35aff0ef31973" category="inline-image-macro">Une capture d’écran d’un système Azure NetApp Files .</block>
+  <block id="6693c2dfdc2c47e27fc17364d3cc5b03" category="paragraph"><block ref="6693c2dfdc2c47e27fc17364d3cc5b03" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58eaebf972358f1cf03d386a4ade1a0f" category="paragraph-title">Quelle est la prochaine étape ?</block>
+  <block id="2d8388ef854dfa09cecb11936ccce248" category="inline-link-macro">Commencez à créer et à gérer des volumes</block>
+  <block id="7287a568988e3d4791216dba265eeae9" category="paragraph"><block ref="1e09faaddd6af4b1a47324cf37312df0" category="inline-link-macro-rx"></block> .</block>
+  <block id="77d4a269f24167619886cc8e413b1300" category="summary">Après avoir configuré votre système, vous pouvez créer des comptes Azure NetApp Files , des pools de capacité et des volumes.</block>
+  <block id="9be5a2eae9bab39aee7d0161c137cd43" category="doc">Créer et monter des volumes</block>
+  <block id="1c27e11c5e65b93611e6f5ce640f8184" category="section-title">Créer des volumes</block>
+  <block id="15b71829402124199d38fc483f8a71b5" category="paragraph">Vous pouvez créer des volumes NFS ou SMB dans un compte Azure NetApp Files nouveau ou existant.</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">Avant de commencer</block>
+  <block id="871a29db0a928b46295d82cee2357c13" category="list-text">Si vous souhaitez utiliser SMB, vous devez avoir configuré DNS et Active Directory.</block>
+  <block id="943219d5074bb5ad25a6a5caf2ffdd2a" category="list-text">Lorsque vous prévoyez de créer un volume SMB, vous devez disposer d’un serveur Windows Active Directory auquel vous pouvez vous connecter.  Vous saisirez ces informations lors de la création du volume.</block>
+  <block id="cec3ad809335330fe1fa6ca172f0f728" category="list-text">Ouvrez le système Azure NetApp Files .</block>
+  <block id="91cdf4212dd8b6d1a4b7c7772990269a" category="list-text">Sélectionnez *Ajouter un nouveau volume*.</block>
+  <block id="8efbe080646813cd33c5297ebb1ef190" category="list-text">Fournissez les informations requises sur chaque page :</block>
+  <block id="456471eadf5491bcec7adf6094a8bf4c" category="list-text">* Compte Azure NetApp Files * : choisissez un compte Azure NetApp Files existant ou créez un nouveau compte.  Lors de la création d’un nouveau compte, vous devez également sélectionner le groupe de ressources.  Vous pouvez utiliser un groupe de ressources existant ou en créer un nouveau.</block>
+  <block id="13ecbacd691c26d682199c2a13ae7ca8" category="inline-image-macro">Capture d’écran des champs requis pour créer un compte Azure NetApp Files , qui comprend un nom, un abonnement Azure, un emplacement et un groupe de ressources.</block>
+  <block id="be40baf84cfc673a091dfd1b17d7663a" category="paragraph"><block ref="be40baf84cfc673a091dfd1b17d7663a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0dc3251c60a979588ce5f7932e69ba87" category="list-text">*Pool de capacité* : sélectionnez un pool de capacité existant ou créez un nouveau pool de capacité.</block>
+  <block id="79f05e8f99917560625d1cf3f2d4fc5d" category="inline-link">niveau de service</block>
+  <block id="e32293acf9f8f2582959ea59bd2a3d74" category="paragraph">Si vous créez un nouveau pool de capacité, spécifiez la taille et<block ref="4e715f113c82ee22e8628443964b7ef4" category="inline-link-rx"></block> .</block>
+  <block id="3fba1bba05a9e291509b06015205099e" category="paragraph">La taille minimale d'un pool de capacité est de 1 To.</block>
+  <block id="1e29b3affdc5fcfad5dac0ecb9e25d13" category="inline-image-macro">Capture d'écran du menu de création d'un pool de capacité.</block>
+  <block id="0ad86c450721685ee9aecfd1e1083746" category="paragraph"><block ref="0ad86c450721685ee9aecfd1e1083746" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8e8ec04eab6a2b3620a8d2306a11ee86" category="inline-link-macro">Configurer les fonctionnalités du réseau</block>
+  <block id="7aa03bdde240084e3711de437940eebd" category="list-text">*Détails et balises* : saisissez le nom et la taille du volume, le réseau virtuel et le sous-réseau où le volume doit résider, et spécifiez éventuellement des balises pour le volume.  Choisissez le réseau *Standard* ou *Basique*.  *Standard* prend en charge les fonctionnalités de réseau virtuel (VNet) tandis que *Basic* a des limites IP réduites et aucune fonctionnalité VNet supplémentaire pour le volume. Pour plus d'informations, consultez la section <block ref="aab7e0d4714d2268520d028ad84034e8" category="inline-link-macro-rx"></block> .</block>
+  <block id="1aff0e06e72482e629d0851b1b33c4c3" category="inline-image-macro">Capture d'écran des options de création de volume.</block>
+  <block id="48e4eece00348c431f69a4bd3fc56c32" category="paragraph"><block ref="48e4eece00348c431f69a4bd3fc56c32" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3b608e06daf087ff8d8ec6c3426b4e86" category="list-text">*Protocole* : Choisissez le protocole NFS ou SMB et saisissez les informations requises.</block>
+  <block id="d42c5c8ad61204ac7a04e10c1f76009e" category="paragraph">Si vous choisissez NFS, vous devez saisir le *chemin du volume*, choisir la *version NFS* et définir la *politique d'exportation*.</block>
+  <block id="dea14d87fa3d65df58f3beda6ccb3a30" category="inline-image-macro">Une capture d'écran des champs requis pour configurer un volume NFS.</block>
+  <block id="5a61706f5d21022cecc3f5f8f8c02352" category="paragraph"><block ref="5a61706f5d21022cecc3f5f8f8c02352" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7dd32198f9c9500fe2062e6beda11335" category="paragraph">Si vous choisissez SMB, vous devez saisir le **chemin du volume**, puis configurer la connectivité SMB avec l'**adresse IP principale DNS** et les détails de configuration d'Active Directory.</block>
+  <block id="384442b7c021ea920d5444dad3c474e3" category="inline-image-macro">Une capture d'écran des champs requis pour configurer un volume SMB.</block>
+  <block id="2bcd793ac083ce37802a490c8642c48a" category="paragraph"><block ref="2bcd793ac083ce37802a490c8642c48a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="405c1e241cc1b6685d6c0cc7dbbc8042" category="list-text">Si vous souhaitez que ce volume soit créé sur la base d’un instantané d’un volume existant, sélectionnez l’instantané dans la liste déroulante Nom de l’instantané.</block>
+  <block id="169e200f5675cc6aa192bb4352afc5bc" category="list-text">Sélectionnez *Ajouter un volume*.</block>
+  <block id="b9976c307b5cece653d212be305d05e7" category="inline-xref">monter le volume cloud</block>
+  <block id="d6b2cb02a8761e4b21234194687a5da8" category="list-text">Après avoir créé le volume, vous devez procéder à<block ref="119cf8e9ee17747f951e727290c79802" category="inline-xref-macro-rx"></block> .</block>
+  <block id="2a4a19d3d732c5f7aa35fa729ac0d8ac" category="section-title">Monter des volumes</block>
+  <block id="16e42324a9fa41f7a3c0b449f1b2af15" category="paragraph">Accédez aux instructions de montage depuis la console NetApp afin de pouvoir monter le volume sur un hôte.</block>
+  <block id="13179c49acf98d5c7da5a59de66d57c7" category="list-text">Dans la console NetApp , ouvrez le système Azure NetApp Files .</block>
+  <block id="67f4738c0e1d2b1b1df742199d5c821d" category="list-text">Déplacez le curseur sur le volume puis sélectionnez les trois points<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> à côté de l'état du volume.</block>
+  <block id="3441e294ec1049d9f3692284dddd2e3b" category="list-text">Sélectionnez **Monter le volume**.</block>
+  <block id="ed098667e58a3c583c4147e4fd6baaa8" category="inline-image-macro">Une capture d'écran des opérations disponibles lorsque vous passez le curseur sur un volume.</block>
+  <block id="6baf9d765e707f5ba28ae423f89b6f1d" category="paragraph"><block ref="6baf9d765e707f5ba28ae423f89b6f1d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="38aa5b57f82843fe74bb954a343bf4e0" category="list-text">Suivez les instructions pour monter le volume.</block>
+  <block id="a99fab69b8aa9775fe1767ce605ae8bd" category="summary">NetApp fournit un support pour la console NetApp de différentes manières. De nombreuses options d'auto-assistance gratuites sont disponibles 24h/24 et 7j/7, telles que des articles de la base de connaissances (KB) et un forum communautaire. Votre inscription au support inclut une assistance technique à distance via un ticket web.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obtenir de l'aide</block>
+  <block id="2feeca48692986e9cc471ec61f847fca" category="paragraph">NetApp fournit un support pour NetApp Console et ses services cloud de diverses manières. De nombreuses options d'auto-assistance gratuites sont disponibles 24h/24 et 7j/7, telles que des articles de la base de connaissances (KB) et un forum communautaire. Votre inscription au support inclut une assistance technique à distance via un ticket web.</block>
+  <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">Obtenir de l'aide pour un service de fichiers d'un fournisseur cloud</block>
+  <block id="317cbd2c4fdbfd06a6c66bcd3f57d7ad" category="paragraph">Pour obtenir une assistance technique relative à un service de fichiers de fournisseur cloud, à son infrastructure ou à toute solution utilisant le service, reportez-vous à la documentation de ce produit.</block>
+  <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSx pour ONTAP</block>
+  <block id="359d8b16e442ffaa72e03c95fcd60448" category="list-text"><block ref="359d8b16e442ffaa72e03c95fcd60448" category="inline-link-macro-rx"></block></block>
+  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="inline-link-macro">Azure NetApp Files</block>
+  <block id="153836c062a78213f2aa165322254aa4" category="list-text"><block ref="153836c062a78213f2aa165322254aa4" category="inline-link-macro-rx"></block></block>
+  <block id="1215f8190533dfdf63d2224a6d88266f" category="inline-link-macro">Google Cloud NetApp Volumes</block>
+  <block id="0d592360c983f234b130127efee38805" category="list-text"><block ref="0d592360c983f234b130127efee38805" category="inline-link-macro-rx"></block></block>
+  <block id="68e6fe8cde496154d24fd032b4262070" category="paragraph">Pour bénéficier d'un support technique spécifique à NetApp et à ses solutions de stockage et services de données, utilisez les options de support décrites ci-dessous.</block>
+  <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Utiliser les options d'auto-assistance</block>
+  <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Ces options sont disponibles gratuitement, 24 heures sur 24, 7 jours sur 7 :</block>
+  <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentation</block>
+  <block id="5bb94d173380c00577f5e04b6f26bb94" category="paragraph">La documentation de la console NetApp que vous consultez actuellement.</block>
+  <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Base de connaissances</block>
+  <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
+  <block id="0e20091afcea2d83d0033a933ba85092" category="paragraph">Recherchez dans la base de connaissances NetApp pour trouver des articles utiles pour résoudre les problèmes.</block>
+  <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Communautés</block>
+  <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
+  <block id="777d75a90b107e4f18469f82c4f81fe2" category="paragraph">Rejoignez la communauté NetApp Console pour suivre les discussions en cours ou en créer de nouvelles.</block>
+  <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Créer un dossier auprès du support NetApp</block>
+  <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">En plus des options d’auto-assistance ci-dessus, vous pouvez travailler avec un spécialiste du support NetApp pour résoudre tout problème après avoir activé le support.</block>
+  <block id="8fece025a1a8fef7018449bf104a2527" category="list-title">Avant de commencer</block>
+  <block id="c406bf0ac8ac87bc5bb7132a7351b2ae" category="inline-link">Découvrez comment gérer les informations d'identification associées à votre connexion à la console</block>
+  <block id="377118f28487e70bd456993144b72fc7" category="list-text">Pour utiliser la fonctionnalité *Créer un dossier*, vous devez d'abord associer vos informations d'identification du site de support NetApp à votre connexion à la console.<block ref="68c4321a756e3ffe955b62cff6fea46d" category="inline-link-rx"></block> .</block>
+  <block id="e49aa971c20ec071f1b5bbc3c7266769" category="list-text">Si vous ouvrez un dossier pour un système ONTAP doté d'un numéro de série, votre compte NSS doit être associé au numéro de série de ce système.</block>
+  <block id="0ab80a63088581d58dcf067051f4c894" category="list-text">Dans la console NetApp , sélectionnez *Aide &gt; Support*.</block>
+  <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Sur la page *Ressources*, choisissez l'une des options disponibles sous Support technique :</block>
+  <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Sélectionnez *Appelez-nous* si vous souhaitez parler à quelqu'un au téléphone. Vous serez redirigé vers une page sur netapp.com qui répertorie les numéros de téléphone que vous pouvez appeler.</block>
+  <block id="d65a2a6fc9caad1867728d4382eeb989" category="list-text">Sélectionnez *Créer un dossier* pour ouvrir un ticket avec un spécialiste du support NetApp :</block>
+  <block id="a1123cd59d7bd876c080c33906ae65ce" category="list-text">*Service* : sélectionnez le service auquel le problème est associé. Par exemple, * NetApp Console* lorsqu'il s'agit d'un problème de support technique lié aux flux de travail ou aux fonctionnalités de la console.</block>
+  <block id="987df7518e2afb50a860647c832afd13" category="list-text">*Système* : Si applicable au stockage, sélectionnez * Cloud Volumes ONTAP* ou *On-Prem*, puis l'environnement de travail associé.</block>
+  <block id="8f8e8a86e5f52b6186a37bdf266c4320" category="paragraph">La liste des systèmes est dans le périmètre de l'organisation de la console et de l'agent de console que vous avez sélectionné dans la bannière supérieure.</block>
+  <block id="e6f29fb3c7636dc0040600dd0e84bb79" category="list-text">*Priorité du cas* : Choisissez la priorité du cas, qui peut être Faible, Moyenne, Élevée ou Critique.</block>
+  <block id="835eb4008e97c2a7f69bbb2725285e34" category="paragraph">Pour en savoir plus sur ces priorités, passez votre souris sur l’icône d’information à côté du nom du champ.</block>
+  <block id="0f7d9319c95a8be1492e74601c4b3259" category="list-text">*Description du problème* : Fournissez une description détaillée de votre problème, y compris tous les messages d'erreur applicables ou les étapes de dépannage que vous avez effectuées.</block>
+  <block id="002c6f26fb01affb37b8cf3cef7a1fb0" category="list-text">*Adresses e-mail supplémentaires* : saisissez des adresses e-mail supplémentaires si vous souhaitez informer quelqu'un d'autre de ce problème.</block>
+  <block id="c7f5c1a75acc58c6f004efc0ce1eba09" category="list-text">*Pièce jointe (facultatif)* : Téléchargez jusqu'à cinq pièces jointes, une à la fois.</block>
+  <block id="bfa80e7aaad6da353b431bff3a0e12d6" category="paragraph">Les pièces jointes sont limitées à 25 Mo par fichier. Les extensions de fichiers suivantes sont prises en charge : txt, log, pdf, jpg/jpeg, rtf, doc/docx, xls/xlsx et csv.</block>
+  <block id="baaf0e61add7d12cf8d12e023d5aef18" category="inline-image-macro">Capture d'écran du formulaire Créer un cas qui vous permet de créer un cas auprès du support NetApp .</block>
+  <block id="77c89527ec8a9f89b24c5579d19b3b4b" category="paragraph"><block ref="77c89527ec8a9f89b24c5579d19b3b4b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">Après avoir terminé</block>
+  <block id="18f487556417bb6d9721a7005ae097c9" category="paragraph">Une fenêtre contextuelle apparaîtra avec votre numéro de dossier d'assistance. Un spécialiste du support NetApp examinera votre cas et vous répondra dans les plus brefs délais.</block>
+  <block id="0ff9b4b8684b9e03c9c1e1320935eae3" category="paragraph">Pour un historique de vos demandes d'assistance, vous pouvez sélectionner *Paramètres &gt; Chronologie* et rechercher les actions nommées « créer une demande d'assistance ». Un bouton à l’extrême droite vous permet de développer l’action pour voir les détails.</block>
+  <block id="5c56753585e89a84941bb3a78bc681af" category="paragraph">Il est possible que vous rencontriez le message d'erreur suivant lorsque vous essayez de créer un dossier :</block>
+  <block id="a30f69ab0ec85d427a3e8835713525bd" category="paragraph">« Vous n'êtes pas autorisé à créer un dossier contre le service sélectionné »</block>
+  <block id="178fdaf97b1d1577437f11ee9d5e5229" category="paragraph">Cette erreur peut signifier que le compte NSS et la société d'enregistrement à laquelle il est associé ne sont pas la même société d'enregistrement pour le numéro de série du compte NetApp Console (c'est-à-dire. 960xxxx) ou le numéro de série de l'environnement de travail. Vous pouvez demander de l’aide en utilisant l’une des options suivantes :</block>
+  <block id="639be990cfca56ab4b63685d8bacd437" category="list-text">Soumettez un cas non technique à<block ref="2298f47e4dad19a3156da7ce6116d9b1" category="inline-link-rx"></block></block>
+  <block id="e1100b46295d42ed50ba7a4630710164" category="section-title">Gérez vos cas d'assistance</block>
+  <block id="316508a3483178100806a9d44b49aba2" category="paragraph">Vous pouvez afficher et gérer les cas d'assistance actifs et résolus directement depuis la console. Vous pouvez gérer les cas associés à votre compte NSS et à votre entreprise.</block>
+  <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">Notez ce qui suit :</block>
+  <block id="5e4e7672ec2ba2b8a763da7f6714e212" category="list-text">Le tableau de bord de gestion des cas en haut de la page offre deux vues :</block>
+  <block id="01c3ffea552d74a5ae390b10e71a1f26" category="list-text">La vue de gauche montre le nombre total de dossiers ouverts au cours des 3 derniers mois par le compte utilisateur NSS que vous avez fourni.</block>
+  <block id="e3b6c09a5686233f72ce1ea60a1eb088" category="list-text">La vue de droite affiche le nombre total de dossiers ouverts au cours des 3 derniers mois au niveau de votre entreprise en fonction de votre compte utilisateur NSS.</block>
+  <block id="b19b168cc8a2b8c984465e140256b3a2" category="paragraph">Les résultats du tableau reflètent les cas liés à la vue que vous avez sélectionnée.</block>
+  <block id="56dcadeee6b0e5c47a52673f9b5a0bb3" category="list-text">Vous pouvez ajouter ou supprimer des colonnes d'intérêt et filtrer le contenu des colonnes telles que Priorité et Statut. D'autres colonnes fournissent simplement des capacités de tri.</block>
+  <block id="6f936762e1223311f031685422fcd3a4" category="paragraph">Consultez les étapes ci-dessous pour plus de détails.</block>
+  <block id="b14929795a61440e9b4ec9f8a4885ae3" category="list-text">Au niveau de chaque cas, nous offrons la possibilité de mettre à jour les notes du cas ou de fermer un cas qui n'est pas déjà au statut Fermé ou En attente de fermeture.</block>
+  <block id="9163e8bca6fd93c080d35ab49e3efdfa" category="list-text">Dans la console NetApp , sélectionnez *Aide &gt; Support*.</block>
+  <block id="2019fd19051c3ef493dbbb9ca65bab87" category="list-text">Sélectionnez *Gestion des cas* et si vous y êtes invité, ajoutez votre compte NSS à la console.</block>
+  <block id="75e54e3a6fdbf43ed890669e079d7594" category="paragraph">La page *Gestion des cas* affiche les cas ouverts liés au compte NSS associé à votre compte utilisateur de la console. Il s'agit du même compte NSS qui apparaît en haut de la page *Gestion NSS*.</block>
+  <block id="2ae5ae78bdb2d222f15fd8e89248709c" category="list-text">Modifiez éventuellement les informations qui s'affichent dans le tableau :</block>
+  <block id="1d39d3ab518e1e3f16cbafb2a56e1fd9" category="list-text">Sous *Cas de l'organisation*, sélectionnez *Afficher* pour afficher tous les cas associés à votre entreprise.</block>
+  <block id="059e856250b59be3069246887b74a23c" category="list-text">Modifiez la plage de dates en choisissant une plage de dates exacte ou en choisissant une période différente.</block>
+  <block id="a1bb576be9e5a356290f231efb51b3f5" category="list-text">Filtrer le contenu des colonnes.</block>
+  <block id="1c6ea5ef583389e18e7d7bda70beaa71" category="inline-image-macro">L'icône plus qui apparaît dans le tableau</block>
+  <block id="8ac6be88c1aa79062825a147fb263b0e" category="list-text">Modifiez les colonnes qui apparaissent dans le tableau en sélectionnant<block ref="500a336e7ba1c54bcffba4e27bda4eb6" category="inline-image-macro-rx" type="image"></block> et ensuite choisir les colonnes que vous souhaitez afficher.</block>
+  <block id="ad0ae9ea1f2e8d973a9a0f6bb169f494" category="inline-image-macro">Une icône avec trois points qui apparaît dans la dernière colonne du tableau</block>
+  <block id="049b7b9fab1242f5e715952973c9474d" category="list-text">Gérer un dossier existant en sélectionnant<block ref="7381d9baeaf62eb099ce84f1a21ed5ca" category="inline-image-macro-rx" type="image"></block> et en sélectionnant l’une des options disponibles :</block>
+  <block id="6d9dd74e7709ef802d299966f7898f6b" category="list-text">*Voir le cas* : Afficher tous les détails sur un cas spécifique.</block>
+  <block id="8e6b52a532a4fbbfc98dca3ebfa5f1e6" category="list-text">*Mettre à jour les notes du cas* : fournissez des détails supplémentaires sur votre problème ou sélectionnez *Télécharger des fichiers* pour joindre jusqu'à un maximum de cinq fichiers.</block>
+  <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">*Fermer le dossier* : Fournissez des détails sur les raisons pour lesquelles vous fermez le dossier et sélectionnez *Fermer le dossier*.</block>
+  <block id="079dcdedf213e51a79059ea332844348" category="summary">Après avoir configuré votre système, vous pouvez gérer les comptes Azure NetApp Files , les pools de capacité, les volumes et les instantanés.</block>
+  <block id="9038e7cfcfe9bb9df9afd31371070be8" category="doc">Gérer les volumes existants</block>
+  <block id="a2669b974873fd7c51079b5fcd7d7946" category="paragraph">Vous pouvez gérer les volumes existants à mesure que vos besoins de stockage évoluent.  Vous pouvez modifier des volumes, modifier le niveau de service d'un volume, gérer les copies Snapshot et supprimer des volumes.</block>
+  <block id="333d9261c295516441352ec57f1fbd5a" category="section-title">Modifier la taille et les balises d'un volume</block>
+  <block id="8cbb6213062bff0f8ae5d9232049a4ae" category="paragraph">Après avoir créé un volume, vous pouvez modifier sa taille et ses balises à tout moment.</block>
+  <block id="c6f681662d24d103e517aeb6021115bc" category="list-text">Ouvrez le système.</block>
+  <block id="8acb095feb0a7824e13dd4cff484b450" category="list-text">Passez la souris sur le volume et sélectionnez *Modifier*.</block>
+  <block id="c94fd6f55752bbd9d6ff1d91b90b2493" category="list-text">Modifiez la taille et les balises selon vos besoins.</block>
+  <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">Sélectionnez *Appliquer*.</block>
+  <block id="d541c25f9313db86b9a30cdcc45ecf79" category="section-title">Modifier le niveau de service du volume</block>
+  <block id="43e1a577b6b8efef38b66ad99c2617e3" category="paragraph">Après avoir créé un volume, vous pouvez modifier le niveau de service à tout moment tant que le pool de capacité de destination existe déjà.</block>
+  <block id="2b59b840a5b967b90d4d7ab8b92489af" category="list-text">Passez la souris sur le volume et sélectionnez *Modifier le niveau de service*.</block>
+  <block id="83f077d776e69552c4da718ba6cb17ce" category="list-text">Sélectionnez le pool de capacité qui fournit le niveau de service souhaité.</block>
+  <block id="b3d12894d56e85cc742cb855ce388cdf" category="list-text">Sélectionnez *Modifier*.</block>
+  <block id="538a392da8eeab76314db8254ebf544b" category="paragraph">Le volume est déplacé vers l’autre pool de capacité sans impact sur le volume.</block>
+  <block id="e479d2534f323a1275e2ed0809755e56" category="section-title">Gérer les copies instantanées</block>
+  <block id="e8ae2d2b47ef8fe5d9635ba5138d815e" category="paragraph">Les copies instantanées fournissent une copie ponctuelle de votre volume.  Créez des copies instantanées, restaurez les données sur un nouveau volume et supprimez les copies instantanées.</block>
+  <block id="072ce5964f5857c89ec5dc601b703af3" category="list-text">Passez la souris sur le volume et choisissez l’une des options disponibles pour gérer les copies Snapshot :</block>
+  <block id="77920e8d9473162a2167976898eaa180" category="list-text">*Créer une copie instantanée*</block>
+  <block id="ac5983a9eada1c7d1b2571955cdabebc" category="list-text">*Rétablir le volume sur Snapshot*</block>
+  <block id="b4d6c5073915bd6ebc84d2c6c45d666f" category="list-text">*Supprimer une copie d'instantané*</block>
+  <block id="df95b2ddbeefe0bd257bae9d1c7d663a" category="list-text">Suivez les instructions pour terminer l’action sélectionnée.</block>
+  <block id="f91674f3b22216fc484532cd24dda908" category="section-title">Supprimer des volumes</block>
+  <block id="9497c556620605c0441cf034ff68a527" category="paragraph">Supprimez les volumes dont vous n’avez plus besoin.</block>
+  <block id="f31dbb59f9910175fac984702077246e" category="list-text">Passez la souris sur le volume puis sélectionnez *Supprimer*.</block>
+  <block id="085b0943196ae7c43e0a95af45bc731f" category="list-text">Confirmez que vous souhaitez supprimer le volume.</block>
+  <block id="a2a31acd90ec883c348fa2a3a6b3ad0e" category="summary">Commencez à utiliser Azure NetApp Files en configurant une application Microsoft Entra et en créant un système.</block>
+  <block id="65ce4dce26160be29539699c6623e379" category="doc">Démarrage du flux de travail</block>
+  <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Un</block>
+  <block id="6db31f7ad9ac5c8a399245b8721663fc" category="inline-link-macro">Configurer une application Microsoft Entra</block>
+  <block id="4825dc1eb26b7e7de707e1565fcb2692" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> <block ref="ceb71631b57ba9aa78ded8805cd28ebf" category="inline-link-macro-rx"></block></block>
+  <block id="0e63ec6ed03b6c3507b12798044de570" category="paragraph">Depuis Azure, accordez des autorisations à une application Microsoft Entra et copiez l’ID d’application (client), l’ID d’annuaire (locataire) et la valeur d’un secret client.</block>
+  <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Deux</block>
+  <block id="d89af440b6e93ddf112a507e25b68050" category="inline-link-macro">Créer un système Azure NetApp Files</block>
+  <block id="d18f5023685c9294fe182d7d16877e19" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> <block ref="2409ee245d6810a7b80cc8d958a0bda3" category="inline-link-macro-rx"></block></block>
+  <block id="73ff49181f8f01a9e6f958c584d11ffc" category="paragraph">Sur la page Systèmes de la console NetApp , sélectionnez *Ajouter un système* &gt; *Microsoft Azure* &gt; * Azure NetApp Files*, puis fournissez des détails sur l’application Active Directory.</block>
+  <block id="c7342c3c601c8359ae71653932f0a267" category="summary">Découvrez comment supprimer Azure NetApp Files de la console NetApp .  Il ne supprime pas votre compte ou vos volumes Azure NetApp Files .  Vous pouvez rajouter Azure NetApp Files à la console à tout moment.</block>
+  <block id="4c4e3f3d97240f2733748037254ef11b" category="doc">Supprimer les Azure NetApp Files de la console NetApp</block>
+  <block id="a0254c314a7cdb4fe0ec551dd55f3716" category="paragraph">Vous pouvez supprimer un système Azure NetApp Files de la console NetApp .  La suppression du système Azure NetApp Files ne supprime pas votre compte Azure NetApp Files , vos pools de capacité ou vos volumes.  Vous pouvez rajouter Azure NetApp Files à la console à tout moment.</block>
+  <block id="f3894063db4ef14f934b024e99c3b0b2" category="list-text">En haut à droite de la page, sélectionnez les trois points<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> puis *Supprimer les Azure NetApp Files*.</block>
+  <block id="85833ade84c26ef3249600b17effff7e" category="inline-image-macro">Une capture d’écran qui montre l’option permettant de supprimer un système Azure NetApp Files .</block>
+  <block id="57407172b547a10eede67bb947489c41" category="paragraph"><block ref="57407172b547a10eede67bb947489c41" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="127cb235e55e33faa0d21e9fb1eca92a" category="list-text">Dans la boîte de dialogue contextuelle, sélectionnez *Supprimer* pour confirmer que vous souhaitez supprimer le système.</block>
+  <block id="02b087a8f0d38e5208db545bfa815d2a" category="summary">La console NetApp a besoin d’autorisations pour configurer et gérer Azure NetApp Files.  Vous pouvez accorder les autorisations requises à un compte Azure en créant et en configurant une application Microsoft Entra et en obtenant les informations d’identification Azure dont la console a besoin.</block>
+  <block id="28f3ebeb284e106f3db1ecdcf0c0d2ff" category="section-title">Étape 1 : Créer l'application</block>
+  <block id="fc08dc165e8e21d029f26ca8cb6f019c" category="paragraph">Créez une application Microsoft Entra et un principal de service que la console peut utiliser pour le contrôle d’accès basé sur les rôles.</block>
+  <block id="9e0b4c608c2ed027fef07ddc68aae407" category="inline-link">Documentation Microsoft Azure : autorisations requises</block>
+  <block id="e5b4feab292e545e09dcd2714a5bc078" category="paragraph">Vous devez disposer des autorisations appropriées dans Azure pour créer une application Active Directory et attribuer l’application à un rôle. Pour plus de détails, reportez-vous à<block ref="c67f5fa38a9480e2db769f61bc8033d8" category="inline-link-rx"></block> .</block>
+  <block id="3acc75f616414df16724fc2f4fe192eb" category="list-text">Depuis le portail Azure, ouvrez le service *Microsoft Entra ID*.</block>
+  <block id="abcaecfb112ec16a9054b876f99d7cf4" category="inline-image-macro">Une capture d’écran qui montre le service Active Directory dans Microsoft Azure.</block>
+  <block id="5ee9dc93089da3e95c9863f5259127a3" category="paragraph"><block ref="5ee9dc93089da3e95c9863f5259127a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6903fcc348dc2286adda5751418a7f9" category="list-text">Dans le menu, sélectionnez *Inscriptions d'applications*.</block>
+  <block id="cce8aa4eda34a5338284d12bd518d218" category="list-text">Créer l'application :</block>
+  <block id="6d730ff41d50e6c38331a70a20a46df3" category="list-text">Sélectionnez *Nouvelle inscription*.</block>
+  <block id="c9034af778b085a9440ffcb8389cc4db" category="list-text">Précisez les détails de l'application :</block>
+  <block id="46beecb01aa2327ae1886dfc53955977" category="list-text">*Nom*: Saisissez un nom pour l'application.</block>
+  <block id="d2a68aae507dd2f86fe85944bad991fe" category="list-text">*Type de compte* : Sélectionnez un type de compte (n'importe lequel fonctionnera avec la console).</block>
+  <block id="135a1682a5c17ecdf84e57a4dc0c0959" category="list-text">*URI de redirection*: Vous pouvez laisser ce champ vide.</block>
+  <block id="b5249314aff5fae6b6de54ce7f13f16b" category="list-text">Sélectionnez *S'inscrire*.</block>
+  <block id="e762ce4f71e8abc9d8deee4d4b7277fe" category="list-text">Copiez l'*ID d'application (client)* et l'*ID de répertoire (locataire)*.</block>
+  <block id="7f2c8aa68f18e907a3c5a92e556d4a8a" category="inline-image-macro">Une capture d'écran qui montre l'ID d'application (client) et l'ID de répertoire (locataire) pour une application dans Microsoft Entra ID.</block>
+  <block id="9f4ee24450c803ea94c43753456d43d1" category="paragraph"><block ref="9f4ee24450c803ea94c43753456d43d1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="48786893c59bde124604a6e9b0d9da7b" category="paragraph">Lorsque vous créez le système Azure NetApp Files dans la console, vous devez fournir l’ID d’application (client) et l’ID de répertoire (locataire) de l’application. La console utilise les identifiants pour se connecter par programmation.</block>
+  <block id="715ba30d0bc9581a50ce10a867a6b0e1" category="list-text">Créez un secret client pour l'application afin que la console puisse l'utiliser pour s'authentifier avec Microsoft Entra ID :</block>
+  <block id="05498c836fbd4349a752efbb54e8949c" category="list-text">Sélectionnez *Certificats et secrets &gt; Nouveau secret client*.</block>
+  <block id="56c696c4118c8dc3d2947c159fdbbb7c" category="list-text">Fournissez une description du secret et une durée.</block>
+  <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">Sélectionnez *Ajouter*.</block>
+  <block id="a91d60261e2974b6b9f5d3d3d0abacdd" category="list-text">Copiez la valeur du secret client.</block>
+  <block id="9056be4df2e385c15b0e73176bcf8af3" category="inline-image-macro">Une capture d’écran du portail Azure qui affiche un secret client pour le principal du service Microsoft Entra.</block>
+  <block id="12714cc76b41e78029a66f330408bd82" category="paragraph"><block ref="12714cc76b41e78029a66f330408bd82" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b85dc31a703949c3212d61389207e866" category="paragraph">Votre application AD est maintenant configurée et vous devez avoir copié l'ID de l'application (client), l'ID du répertoire (locataire) et la valeur du secret client.  Vous devez saisir ces informations dans la console lorsque vous ajoutez un système Azure NetApp Files .</block>
+  <block id="fb9a62d97d21e431e752501f84624d12" category="section-title">Étape 2 : Attribuer l’application à un rôle</block>
+  <block id="4c52768b52ca020200e5a926929d951d" category="paragraph">Vous devez lier le principal de service à votre abonnement Azure et lui attribuer un rôle personnalisé disposant des autorisations requises.</block>
+  <block id="c7fd7910cc533c79ed570ea74704425d" category="inline-link">Créer un rôle personnalisé dans Azure</block>
+  <block id="332263c2176bf987d0f67b1eb6778cc7" category="list-text"><block ref="fbd7cfd0f7566c43a33652aa81c3b4ab" category="inline-link-rx"></block> .</block>
+  <block id="10952fdd0e78f38d00c02822bb64d9b1" category="paragraph">Les étapes suivantes décrivent comment créer le rôle à partir du portail Azure.</block>
+  <block id="a9c29a42130d729dce82ddfb3ac78e46" category="list-text">Ouvrez l'abonnement et sélectionnez *Contrôle d'accès (IAM)*.</block>
+  <block id="afbd0cf8e9a12935b7393f61d6be8005" category="list-text">Sélectionnez *Ajouter &gt; Ajouter un rôle personnalisé*.</block>
+  <block id="639c5e298e30f6fe93b20d922ea17933" category="inline-image-macro">Une capture d’écran qui montre les étapes pour ajouter un rôle personnalisé dans le portail Azure.</block>
+  <block id="bf972dc955fe2e7fb9df0a81d06fb348" category="paragraph"><block ref="bf972dc955fe2e7fb9df0a81d06fb348" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f8dea6ae979907327757e0387e92f235" category="list-text">Dans l’onglet *Bases*, saisissez un nom et une description pour le rôle.</block>
+  <block id="4e3aeed356f1841a4f8d2b701eb57daf" category="list-text">Sélectionnez *JSON* puis *Modifier* qui apparaît en haut à droite du format JSON.</block>
+  <block id="0b7a672df763c13d4ee88f17e17d5dd5" category="list-text">Ajoutez les autorisations suivantes sous _actions_ :</block>
+  <block id="a272bee1eb1df048c1479432c0f8ff7e" category="list-text">Sélectionnez *Enregistrer* &gt; *Suivant* puis *Créer*.</block>
+  <block id="262bd8aff7acbd549ef1a60afb4d3674" category="list-text">Affectez l’application au rôle que vous venez de créer :</block>
+  <block id="f73b1d8fc06d2bae03fb642ee202d04f" category="list-text">Depuis le portail Azure, ouvrez *Abonnements*.</block>
+  <block id="9d13605979e591928497f3c94aa907c2" category="list-text">Sélectionnez l'abonnement.</block>
+  <block id="4373f2885ec5493eabb4edec6b9422e4" category="list-text">Sélectionnez *Contrôle d'accès (IAM) &gt; Ajouter &gt; Ajouter une attribution de rôle*.</block>
+  <block id="d949ba029d09ca88dbe8bf63e0f6d495" category="list-text">Dans l'onglet *Rôle*, sélectionnez le rôle personnalisé que vous avez créé puis *Suivant*.</block>
+  <block id="0a6c621aa17fc5940d876eaadda3bb73" category="list-text">Dans l'onglet *Membres*, procédez comme suit :</block>
+  <block id="8663f7025266bcb72c4429db8da6c602" category="list-text">Gardez *Utilisateur, groupe ou principal du service* sélectionné.</block>
+  <block id="049d14d05ca9e7adafff9e17ed48736e" category="list-text">Sélectionnez *Sélectionner les membres*.</block>
+  <block id="0972e60de3c49ba718e1aa6c9313eebc" category="inline-image-macro">Capture d’écran du portail Azure qui affiche l’onglet Membres lors de l’ajout d’un rôle à une application.</block>
+  <block id="3030207711e0d379c8a6c67f942d7c72" category="paragraph"><block ref="3030207711e0d379c8a6c67f942d7c72" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="33aa57c696b6d88350adf8cda157f866" category="list-text">Recherchez le nom de l'application.</block>
+  <block id="4d947fe0b5c4693f487f4fd1a4295c99" category="paragraph">Voici un exemple :</block>
+  <block id="f6f55020a29188338bc94800ac249ad7" category="inline-image-macro">Une capture d’écran du portail Azure qui montre le formulaire Ajouter une attribution de rôle dans le portail Azure.</block>
+  <block id="479d1c5255b557f4e6e3afb3beda5366" category="paragraph"><block ref="479d1c5255b557f4e6e3afb3beda5366" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c7f74fe40e661c7a8f14797d685e22d3" category="list-text">Sélectionnez l'application puis *Sélectionner*.</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">Sélectionnez *Suivant*.</block>
+  <block id="85b8cec39bdb05ec73cd076b2359cfd1" category="list-text">Sélectionnez *Réviser + attribuer*.</block>
+  <block id="6485d92d18edb38c5174a41b5c3c9bd1" category="paragraph">Le principal de service de la console dispose désormais des autorisations Azure requises pour cet abonnement.</block>
+  <block id="60d6c5f483d163e78b5833c78299cc3a" category="section-title">Étape 3 : ajouter les informations d’identification à la console</block>
+  <block id="3f08738e91537e6033a1dcddff37fc49" category="paragraph">Lorsque vous créez le système Azure NetApp Files , vous êtes invité à sélectionner les informations d’identification associées au principal du service.  Vous devez ajouter ces informations d’identification à la console avant de créer le système.</block>
+  <block id="48eb7c4b15e6b9d3e36af9b89c1f18c6" category="list-text">Dans la navigation de gauche de la console, sélectionnez **Administration** &gt; **Informations d’identification**.</block>
+  <block id="c6233dcd0500982eabc73e85f42efc41" category="list-text">Sélectionnez *Ajouter des informations d’identification* et suivez les étapes de l’assistant.</block>
+  <block id="8ff72be2e1eb14e01733228ef4483ae5" category="list-text">*Emplacement des informations d'identification* : sélectionnez *Microsoft Azure &gt; Console NetApp *.</block>
+  <block id="10d9864d222fd249479246f9c50df58c" category="list-text">*Définir les informations d'identification* : saisissez les informations sur le principal du service Microsoft Entra qui accorde les autorisations requises :</block>
+  <block id="734082edf44417dd19cc65943aa65c36" category="list-text">Secret client</block>
+  <block id="5f92aba7d335e90da33ac643d56ed817" category="list-text">ID de l'application (client)</block>
+  <block id="ac1fdeeca5975112ea2d53b754a4c94f" category="list-text">ID du répertoire (locataire)</block>
+  <block id="c543fc2439a41974bc2b6bac672d9710" category="inline-xref">créé l'application AD</block>
+  <block id="10bf7641576f767efba644c9606f6cc9" category="paragraph">Vous auriez dû capturer cette information lorsque vous<block ref="3d73f215425eb80e2dfd60570210a450" category="inline-xref-macro-rx"></block> .</block>
+  <block id="0899501da68f222ed492b1f56f53b085" category="list-text">*Révision* : Confirmez les détails des nouvelles informations d'identification, puis sélectionnez *Ajouter*.</block>
+  <block id="512fd5eb37bb5d3f000a423886a72dd0" category="summary">Avant de pouvoir ouvrir un dossier d'assistance auprès du support technique NetApp , vous devez ajouter un compte de site de support NetApp à la console NetApp , puis vous inscrire au support.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">Inscrivez-vous pour obtenir de l'aide</block>
+  <block id="776abbf4d80cbef17bd3c86ff37b2257" category="paragraph">L'enregistrement du support est requis pour bénéficier d'un support technique spécifique à la console NetApp et à ses solutions de stockage et services de données. L'enregistrement du support est également requis pour activer les flux de travail clés pour les systèmes Cloud Volumes ONTAP .</block>
+  <block id="ba4e23e03f4354a0f1ef2781272c8477" category="paragraph">L'inscription au support n'active pas la prise en charge NetApp pour un service de fichiers de fournisseur cloud. Pour obtenir une assistance technique relative à un service de fichiers de fournisseur cloud, à son infrastructure ou à toute solution utilisant le service, reportez-vous à « Obtenir de l'aide » dans la documentation de ce produit.</block>
+  <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Présentation de l'enregistrement de l'assistance</block>
+  <block id="192054ad7601240a3e8be54cc5cc548e" category="paragraph">Il existe deux formes d'inscription pour activer le droit au support :</block>
+  <block id="869a868c87f6fb61410cfd773b4f1bab" category="list-text">Enregistrement du numéro de série de votre compte NetApp Console (votre numéro de série 960xxxxxxxxx à 20 chiffres situé sur la page Ressources de support de la console).</block>
+  <block id="be0b51de4268d87101344aa0368b4403" category="paragraph">Il s'agit de votre identifiant d'abonnement d'assistance unique pour tout service au sein de la console. Chaque compte de console doit être enregistré.</block>
+  <block id="55ff64467cd508971910145ab5d6b3b8" category="list-text">Enregistrement des numéros de série Cloud Volumes ONTAP associés à un abonnement sur la place de marché de votre fournisseur de cloud (il s'agit de numéros de série 909201xxxxxxxx à 20 chiffres).</block>
+  <block id="3cf9fb70d6921dd90583621f028a395f" category="paragraph">Ces numéros de série sont communément appelés _numéros de série PAYGO_ et sont générés par la console NetApp au moment du déploiement de Cloud Volumes ONTAP .</block>
+  <block id="bf516b6498e37e816d29ae43ae132f74" category="paragraph">L'enregistrement des deux types de numéros de série permet des fonctionnalités telles que l'ouverture de tickets d'assistance et la génération automatique de dossiers. L'enregistrement est terminé en ajoutant des comptes NetApp Support Site (NSS) à la console comme décrit ci-dessous.</block>
+  <block id="ba5983207e417797fefd5b9374ab4a97" category="section-title">Enregistrez la console NetApp pour le support NetApp</block>
+  <block id="dcb7105ba6e3d9411b05e726848feb80" category="paragraph">Pour vous inscrire au support et activer le droit de support, un utilisateur de votre compte NetApp Console doit associer un compte de site de support NetApp à sa connexion à la console. La manière dont vous vous inscrivez au support NetApp dépend du fait que vous possédez déjà ou non un compte NetApp Support Site (NSS).</block>
+  <block id="bf4c731c0ee7f60c8018ad8f96828dda" category="section-title">Client existant avec un compte NSS</block>
+  <block id="ed5bddb699a442b85bc1bb8e1516fe57" category="paragraph">Si vous êtes un client NetApp avec un compte NSS, il vous suffit de vous inscrire pour bénéficier de l'assistance via la console.</block>
+  <block id="76bc427c3d9c4b81dc353078b942f991" category="list-text">Sélectionnez *Administration* &gt; *Informations d'identification*.</block>
+  <block id="f19ab635e6d5f884a22ee4ce067fdbfd" category="list-text">Sélectionnez *Informations d'identification de l'utilisateur*.</block>
+  <block id="e9451600769b4bf4b20ca941ba9e6d19" category="list-text">Sélectionnez *Ajouter des informations d’identification NSS* et suivez l’invite d’authentification du site de support NetApp (NSS).</block>
+  <block id="cfc5506589d5a4d055e721267d5f0732" category="list-text">Pour confirmer que le processus d’inscription a réussi, sélectionnez l’icône Aide, puis sélectionnez *Assistance*.</block>
+  <block id="1d4ea9fd10f6cfcd6f6fe1f861d354a4" category="paragraph">La page *Ressources* devrait indiquer que votre compte Console est enregistré pour l'assistance.</block>
+  <block id="afe8240ca62f4b72006980ff64d371b8" category="paragraph">Notez que les autres utilisateurs de la console ne verront pas ce même statut d'enregistrement de support s'ils n'ont pas associé un compte de site de support NetApp à leur connexion. Cependant, cela ne signifie pas que votre compte n'est pas enregistré pour bénéficier de l'assistance. Tant qu'un utilisateur de l'organisation a suivi ces étapes, votre compte a été enregistré.</block>
+  <block id="1ff5aefce774ec72a211f2b3bb10b950" category="section-title">Client existant mais pas de compte NSS</block>
+  <block id="42eaca1e1c2d9e1f04e932eeaa6d129d" category="paragraph">Si vous êtes un client NetApp existant avec des licences et des numéros de série existants mais _pas_ de compte NSS, vous devez créer un compte NSS et l'associer à votre connexion à la console.</block>
+  <block id="5b2b7f628f804bcb786a097c7e45aa41" category="inline-link">Formulaire d'inscription des utilisateurs du site de support NetApp</block>
+  <block id="0c4a8b62da9473fbd5401273c4f85ee0" category="list-text">Créez un compte sur le site de support NetApp en remplissant le<block ref="041bcb6d9bdf91f7d6ac92ae3a196e12" category="inline-link-rx"></block></block>
+  <block id="d61c9f72493817776f392db42ac446a2" category="list-text">Assurez-vous de sélectionner le niveau d'utilisateur approprié, qui est généralement * Client/Utilisateur final NetApp *.</block>
+  <block id="bd33c4539c7d6985f6edafd4a4f2ba1d" category="list-text">Assurez-vous de copier le numéro de série du compte de console (960xxxx) utilisé ci-dessus pour le champ du numéro de série. Cela accélérera le traitement du compte.</block>
+  <block id="9b1f48f88cd439b7a50fe3e76eb8a853" category="list-text">Associez votre nouveau compte NSS à votre connexion à la console en suivant les étapes ci-dessous<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
+  <block id="e9b1f53d6cabb3394833a4e102eb6a69" category="section-title">Tout nouveau chez NetApp</block>
+  <block id="c20c107d0d4eef6351660f3590324232" category="paragraph">Si vous êtes nouveau sur NetApp et que vous n’avez pas de compte NSS, suivez chaque étape ci-dessous.</block>
+  <block id="e7e9f49f4584c68b9d97c578e73b7583" category="list-text">Dans le coin supérieur droit de la console, sélectionnez l’icône Aide, puis sélectionnez *Support*.</block>
+  <block id="2974170a8b1b5b4a2ac69aacd4c1c9c3" category="list-text">Recherchez le numéro de série de votre identifiant de compte sur la page d'inscription au support.</block>
+  <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">Une capture d'écran du menu Aide où Support est la première option répertoriée</block>
+  <block id="379f9cd57d97013f3f7fdd24f692a0b1" category="paragraph"><block ref="379f9cd57d97013f3f7fdd24f692a0b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dd50e314c18933734174c1156dd9237f" category="inline-link">Site d'inscription au support de NetApp</block>
+  <block id="78f94e749b89d69dcbf3baff21ccb958" category="list-text">Accéder à<block ref="e1c4be66250fd76d5c52bfe2cb7daee2" category="inline-link-rx"></block> et sélectionnez *Je ne suis pas un client NetApp enregistré*.</block>
+  <block id="d4f633ef130727b2776fa7f45024ca7d" category="list-text">Remplissez les champs obligatoires (ceux avec des astérisques rouges).</block>
+  <block id="1128fc8d5ec64880f4d49337ed798d31" category="list-text">Dans le champ *Gamme de produits*, sélectionnez *Cloud Manager*, puis sélectionnez votre fournisseur de facturation applicable.</block>
+  <block id="50a1dc01b7312307c34a888071586955" category="list-text">Copiez le numéro de série de votre compte à l'étape 2 ci-dessus, effectuez la vérification de sécurité, puis confirmez que vous avez lu la politique de confidentialité des données mondiales de NetApp.</block>
+  <block id="3a24c87c9971d2011b4df223718f84b4" category="paragraph">Un email est immédiatement envoyé à la boîte mail prévue à cet effet pour finaliser cette transaction sécurisée. Assurez-vous de vérifier vos dossiers spam si l'e-mail de validation n'arrive pas dans quelques minutes.</block>
+  <block id="03413baeca1ff7222737d8ce299bd4e8" category="list-text">Confirmez l'action depuis l'e-mail.</block>
+  <block id="201080500e946070a2e4873042507c77" category="paragraph">La confirmation soumet votre demande à NetApp et vous recommande de créer un compte sur le site de support NetApp .</block>
+  <block id="a2454703f88e5bf5b433ae850a87151b" category="list-text">Assurez-vous de copier le numéro de série du compte (960xxxx) utilisé ci-dessus pour le champ du numéro de série. Cela accélérera le traitement.</block>
+  <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp devrait vous contacter au cours de ce processus. Il s’agit d’un exercice d’intégration unique pour les nouveaux utilisateurs.</block>
+  <block id="629757336278be576456cf315303b178" category="paragraph">Une fois que vous avez votre compte de site de support NetApp , associez le compte à votre connexion à la console en suivant les étapes ci-dessous<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block> .</block>
+  <block id="3e616bae81890a6c8fae17c9b45af152" category="section-title">Associer les informations d'identification NSS pour la prise en charge de Cloud Volumes ONTAP</block>
+  <block id="f22d1a855e255746a6b925a3b22f7838" category="paragraph">L'association des informations d'identification du site de support NetApp à votre compte de console est requise pour activer les workflows clés suivants pour Cloud Volumes ONTAP:</block>
+  <block id="a0518a10626dc11fd00e2d20265ad240" category="list-text">Enregistrement des systèmes Cloud Volumes ONTAP prépayés pour le support</block>
+  <block id="321aadf78ef73521712291b7aba6411f" category="paragraph">Fournir votre compte NSS est nécessaire pour activer le support de votre système et pour accéder aux ressources de support technique NetApp .</block>
+  <block id="d51b2b497db445a16b1c9583c1abbb59" category="list-text">Déploiement de Cloud Volumes ONTAP lorsque vous apportez votre propre licence (BYOL)</block>
+  <block id="f3cd224f9506684fa3b5e2b89b2a566c" category="paragraph">Il est nécessaire de fournir votre compte NSS pour que la console puisse télécharger votre clé de licence et activer l'abonnement pour la durée que vous avez achetée. Cela inclut les mises à jour automatiques pour les renouvellements de mandat.</block>
+  <block id="f5135b68b75a8404803a1eb438e40c5e" category="list-text">Mise à niveau du logiciel Cloud Volumes ONTAP vers la dernière version</block>
+  <block id="daf104544b5203a46e1580e1b8583f1f" category="paragraph">L’association des informations d’identification NSS à votre compte de console NetApp est différente du compte NSS associé à une connexion utilisateur de console.</block>
+  <block id="5bc1315a63455544e7a917a7cc968939" category="paragraph">Ces informations d’identification NSS sont associées à votre ID de compte de console spécifique. Les utilisateurs appartenant à l'organisation Console peuvent accéder à ces informations d'identification depuis *Support &gt; Gestion NSS*.</block>
+  <block id="328a2c1e7778e9edaf79d90c51409ac4" category="list-text">Si vous disposez d’un compte client, vous pouvez ajouter un ou plusieurs comptes NSS.</block>
+  <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">Si vous disposez d'un compte partenaire ou revendeur, vous pouvez ajouter un ou plusieurs comptes NSS, mais ils ne peuvent pas être ajoutés aux côtés des comptes de niveau client.</block>
+  <block id="e8d4092baef6680c6a35d5228ae31de2" category="paragraph"><block ref="e8d4092baef6680c6a35d5228ae31de2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c0e0b7ff0de9558404e9b77ece42948a" category="list-text">Sélectionnez *Gestion NSS &gt; Ajouter un compte NSS*.</block>
+  <block id="85b9386ed443776127e099931d73448a" category="list-text">Lorsque vous y êtes invité, sélectionnez *Continuer* pour être redirigé vers une page de connexion Microsoft.</block>
+  <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp utilise Microsoft Entra ID comme fournisseur d’identité pour les services d’authentification spécifiques au support et aux licences.</block>
+  <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">Sur la page de connexion, indiquez votre adresse e-mail et votre mot de passe enregistrés sur le site de support NetApp pour effectuer le processus d'authentification.</block>
+  <block id="7687b0a57d5cb728d9fb892dfc814715" category="paragraph">Ces actions permettent à la console d'utiliser votre compte NSS pour des tâches telles que les téléchargements de licences, la vérification des mises à niveau de logiciels et les futures inscriptions au support.</block>
+  <block id="ec084bb25ed5b934c09b361069c246b2" category="list-text">Le compte NSS doit être un compte de niveau client (pas un compte invité ou temporaire). Vous pouvez avoir plusieurs comptes NSS au niveau client.</block>
+  <block id="27387009488fe78dcc7cb7e3e432792f" category="list-text">Il ne peut y avoir qu'un seul compte NSS si ce compte est un compte de niveau partenaire. Si vous essayez d'ajouter des comptes NSS au niveau client et qu'un compte au niveau partenaire existe, vous obtiendrez le message d'erreur suivant :</block>
+  <block id="d926847e4634e19a1aa7358becc0fa27" category="paragraph">« Le type de client NSS n'est pas autorisé pour ce compte car il existe déjà des utilisateurs NSS de types différents. »</block>
+  <block id="a04a3a5322782e8c18d0d64be7e1ccbc" category="paragraph">Il en va de même si vous disposez de comptes NSS préexistants au niveau client et que vous essayez d’ajouter un compte au niveau partenaire.</block>
+  <block id="1afe8a81cfddc9fa9559e272bb6b9496" category="list-text">Une fois la connexion réussie, NetApp stockera le nom d'utilisateur NSS.</block>
+  <block id="1dcb63fd55c4d22e87cb32275b8cc808" category="inline-image-macro">Une icône de trois points horizontaux</block>
+  <block id="0dfcbbbe02d3e96f8ad78782e8772587" category="paragraph">Il s’agit d’un identifiant généré par le système qui correspond à votre e-mail. Sur la page *Gestion NSS*, vous pouvez afficher votre e-mail à partir du<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
+  <block id="fc79de85a483938f72fbcb9822ec0ae3" category="list-text">Si vous avez besoin d'actualiser vos jetons d'identification de connexion, il existe également une option *Mettre à jour les informations d'identification* dans le<block ref="5151db0ded96d46f40ae09b5e5b167a1" category="inline-image-macro-rx" type="image"></block> menu.</block>
+  <block id="b14d512a3c64fb5df16f6721b0603c63" category="paragraph">L'utilisation de cette option vous invite à vous reconnecter. Notez que le jeton de ces comptes expire après 90 jours. Une notification sera publiée pour vous en informer.</block>
+  <block id="90ffe83b5eba4f270fabf9a3fc8697e3" category="summary">Découvrez les nouveautés concernant la prise en charge Azure NetApp Files dans la console NetApp .</block>
+  <block id="490414e0366b091220802d406e52c076" category="doc">Quoi de neuf</block>
+  <block id="0cefe5f6d17b9891a2607df67286b93f" category="paragraph">Découvrez les nouveautés d’ Azure NetApp Files dans la console NetApp .</block>
+  <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">06 octobre 2025</block>
+  <block id="2b513ec32615ab736c1cab315db516f8" category="section-title">13 janvier 2025</block>
+  <block id="944c1cc3564ebb8c58254a0340102350" category="section-title">Fonctionnalités réseau désormais prises en charge dans BlueXP</block>
+  <block id="79d2f91b3755917d79acfd5be561d67b" category="paragraph">Lors de la configuration d’un volume dans Azure NetApp Files à partir de BlueXP, vous pouvez désormais indiquer les fonctionnalités réseau.  Cela correspond aux fonctionnalités disponibles dans Azure NetApp Files natif.</block>
+  <block id="bbe4d8abcc3519b138a73b8e46ee2119" category="section-title">12 juin 2024</block>
+  <block id="9d5b3307d5a7d5905623bf21ab049bdd" category="section-title">22 avril 2024</block>
+  <block id="29c251ed5a57bbffe470654ccbbe714c" category="section-title">11 avril 2021</block>
+  <block id="dbbd746e2d2c019dcb0c3c40b74f4f75" category="section-title">8 mars 2021</block>
+  <block id="de5b4c52cc860c2f7cacca0bb7f4265f" category="section-title">Modifier dynamiquement les niveaux de service</block>
+  <block id="65ade213f17aabb636c7c98c83fa9121" category="paragraph">Vous pouvez désormais modifier dynamiquement le niveau de service d’un volume pour répondre aux besoins de charge de travail et optimiser vos coûts.  Le volume est déplacé vers l’autre pool de capacité sans impact sur le volume.</block>
+  <block id="f89e84889d5fd0c46e9997ddb21ac922" category="inline-link">Découvrez comment modifier le niveau de service d'un volume</block>
+  <block id="50677882efe321e7fec19456f58faadc" category="paragraph"><block ref="536037d368170de6e6fbdb576d167663" category="inline-link-rx"></block> .</block>
+  <block id="95fa237a7a6265df02b6172c4be387f7" category="section-title">3 août 2020</block>
+  <block id="629ca03a8a495acd7bc18927ca4da6cc" category="section-title">Configuration et gestion Azure NetApp Files</block>
+  <block id="2a0093e311ddab71ac3eaea6bf045c9b" category="paragraph">Configurez et gérez Azure NetApp Files directement depuis Cloud Manager.  Après avoir créé un système Azure NetApp Files , vous pouvez effectuer les tâches suivantes :</block>
+  <block id="a42ed9034f13a0f6a3660f2c241f605f" category="list-text">Créez des volumes NFS et SMB.</block>
+  <block id="0d293213ebed3e92e24e1624dfd19aa2" category="list-text">Gérer les pools de capacité et les instantanés de volume</block>
+  <block id="e54595e40dfd177a2a9e671c794a3a4d" category="paragraph">Cloud Manager vous permet de créer, supprimer et restaurer des instantanés de volume.  Vous pouvez également créer de nouveaux pools de capacité et spécifier leurs niveaux de service.</block>
+  <block id="5054d68a0b2f03dece3eb72cfaa09427" category="list-text">Modifiez un volume en changeant sa taille et en gérant les balises.</block>
+  <block id="396a3c9fb559d38e68f68ea139b3539a" category="paragraph">La possibilité de créer et de gérer des Azure NetApp Files directement à partir de Cloud Manager remplace la fonctionnalité de migration de données précédente.</block>
+  <block id="173fd2f937506a4111b0bc09349619a8" category="section-title">5 avril 2020</block>
+  <block id="02a58c551f186d8f833147198d69fb26" category="section-title">Migration de données vers Azure NetApp Files</block>
+  <block id="cc4556ad288d7fd7e7c9f944615b36c2" category="paragraph">Vous pouvez désormais migrer des données NFS ou SMB vers Azure NetApp Files directement depuis Cloud Manager.  Les synchronisations de données sont alimentées par la BlueXP copy and sync.</block>
+  <block id="c20fe03ed4060aff466dc9c6002fce66" category="sidebar">Azure NetApp Files est un service de stockage de fichiers hautes performances natif de Microsoft Azure pour vos principales applications métier.  Cette documentation décrit comment configurer et gérer Azure NetApp Files à l'aide de la console NetApp</block>
+  <block id="4cb31f0690cc628be510eb7f37ff1267" category="sidebar">Azure NetApp Files est un service de stockage de fichiers hautes performances natif de Microsoft Azure pour vos principales applications métier.  Cette documentation décrit comment configurer et gérer Azure NetApp Files à l’aide de la console NetApp .</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Commencer</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="sidebar">Démarrage rapide</block>
+  <block id="6ade0d3f74b8a5014c9cb307d47a0cb4" category="sidebar">Utiliser Azure NetApp Files</block>
+  <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">Gérer les volumes</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs et communauté</block>
+  <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">Services de données NetApp</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Communauté NetApp</block>
+  <block id="d75d347ae1d51e933d39fea688b0abf1" category="sidebar">Documentation Azure NetApp Files</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notes de version</block>
+  <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">Quoi de neuf</block>
+  <block id="54bf50ac4192428b20101638ad32f617" category="sidebar">Créer un système</block>
+  <block id="a5cd00357f60ad0eaa681bb68df15c6d" category="sidebar">Supprimer les Azure NetApp Files</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">Connaissances et soutien</block>
+</blocks>

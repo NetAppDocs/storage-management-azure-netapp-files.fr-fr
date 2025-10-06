@@ -1,0 +1,17 @@
+= Nouvelle autorisation requise
+:allow-uri-read: 
+
+
+
+
+=== Nouvelle autorisation requise
+
+L'autorisation suivante est désormais requise pour gérer les volumes Azure NetApp Files à partir de BlueXP:
+
+Microsoft.Network/virtualNetworks/sous-réseaux/lecture
+
+Cette autorisation est requise pour lire un sous-réseau de réseau virtuel.
+
+Si vous gérez actuellement Azure NetApp Files à partir de BlueXP, vous devez ajouter cette autorisation au rôle personnalisé associé à l’application Microsoft Entra que vous avez créée précédemment.
+
+https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-set-up-azure-ad.html["Découvrez comment configurer une application Microsoft Entra et afficher les autorisations de rôle personnalisées"] .

@@ -1,0 +1,87 @@
+---
+sidebar: sidebar 
+permalink: task-create-volumes.html 
+keywords: azure netapp files, create volumes, create nfs volumes, netapp account, capacity pool, create capacity pool, mount path, get mount path, find mount path, mount volume 
+summary: Après avoir configuré votre système, vous pouvez créer des comptes Azure NetApp Files , des pools de capacité et des volumes. 
+---
+= Créer et monter des volumes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Après avoir configuré votre système, vous pouvez créer des comptes Azure NetApp Files , des pools de capacité et des volumes.
+
+
+
+== Créer des volumes
+
+Vous pouvez créer des volumes NFS ou SMB dans un compte Azure NetApp Files nouveau ou existant.
+
+.Avant de commencer
+* Si vous souhaitez utiliser SMB, vous devez avoir configuré DNS et Active Directory.
+* Lorsque vous prévoyez de créer un volume SMB, vous devez disposer d’un serveur Windows Active Directory auquel vous pouvez vous connecter.  Vous saisirez ces informations lors de la création du volume.
+
+
+.Étapes
+. Ouvrez le système Azure NetApp Files .
+. Sélectionnez *Ajouter un nouveau volume*.
+. Fournissez les informations requises sur chaque page :
++
+** * Compte Azure NetApp Files * : choisissez un compte Azure NetApp Files existant ou créez un nouveau compte.  Lors de la création d’un nouveau compte, vous devez également sélectionner le groupe de ressources.  Vous pouvez utiliser un groupe de ressources existant ou en créer un nouveau.
++
+image:screenshot_anf_create_account.png["Capture d’écran des champs requis pour créer un compte Azure NetApp Files , qui comprend un nom, un abonnement Azure, un emplacement et un groupe de ressources."]
+
+** *Pool de capacité* : sélectionnez un pool de capacité existant ou créez un nouveau pool de capacité.
++
+Si vous créez un nouveau pool de capacité, spécifiez la taille et https://learn.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["niveau de service"^] .
+
++
+La taille minimale d'un pool de capacité est de 1 To.
+
++
+image:screenshot-create-capacity-pool.png["Capture d'écran du menu de création d'un pool de capacité."]
+
+** *Détails et balises* : saisissez le nom et la taille du volume, le réseau virtuel et le sous-réseau où le volume doit résider, et spécifiez éventuellement des balises pour le volume.  Choisissez le réseau *Standard* ou *Basique*.  *Standard* prend en charge les fonctionnalités de réseau virtuel (VNet) tandis que *Basic* a des limites IP réduites et aucune fonctionnalité VNet supplémentaire pour le volume. Pour plus d'informations, consultez la section link:https://learn.microsoft.com/azure/azure-netapp-files/configure-network-features["Configurer les fonctionnalités du réseau"^] .
++
+image:screenshot-create-volume.gif["Capture d'écran des options de création de volume."]
+
+** *Protocole* : Choisissez le protocole NFS ou SMB et saisissez les informations requises.
++
+Si vous choisissez NFS, vous devez saisir le *chemin du volume*, choisir la *version NFS* et définir la *politique d'exportation*.
+
++
+image:screenshot-protocol-nfs.png["Une capture d'écran des champs requis pour configurer un volume NFS."]
+
++
+Si vous choisissez SMB, vous devez saisir le **chemin du volume**, puis configurer la connectivité SMB avec l'**adresse IP principale DNS** et les détails de configuration d'Active Directory.
+
++
+image:screenshot-protocol-smb.png["Une capture d'écran des champs requis pour configurer un volume SMB."]
+
+
+
+. Si vous souhaitez que ce volume soit créé sur la base d’un instantané d’un volume existant, sélectionnez l’instantané dans la liste déroulante Nom de l’instantané.
+. Sélectionnez *Ajouter un volume*.
+. Après avoir créé le volume, vous devez procéder à<<Monter des volumes,monter le volume cloud>> .
+
+
+
+
+== Monter des volumes
+
+Accédez aux instructions de montage depuis la console NetApp afin de pouvoir monter le volume sur un hôte.
+
+.Étapes
+. Dans la console NetApp , ouvrez le système Azure NetApp Files .
+. Déplacez le curseur sur le volume puis sélectionnez les trois points `...` à côté de l'état du volume.
+. Sélectionnez **Monter le volume**.
++
+image:screenshot-volume-options.png["Une capture d'écran des opérations disponibles lorsque vous passez le curseur sur un volume."]
+
+. Suivez les instructions pour monter le volume.
+

@@ -1,0 +1,76 @@
+---
+sidebar: sidebar 
+permalink: task-manage-volumes.html 
+keywords: azure netapp files, delete volumes, delete nfs volumes, netapp account, capacity pool, change service level 
+summary: Après avoir configuré votre système, vous pouvez gérer les comptes Azure NetApp Files , les pools de capacité, les volumes et les instantanés. 
+---
+= Gérer les volumes existants
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Vous pouvez gérer les volumes existants à mesure que vos besoins de stockage évoluent.  Vous pouvez modifier des volumes, modifier le niveau de service d'un volume, gérer les copies Snapshot et supprimer des volumes.
+
+
+
+== Modifier la taille et les balises d'un volume
+
+Après avoir créé un volume, vous pouvez modifier sa taille et ses balises à tout moment.
+
+.Étapes
+. Ouvrez le système.
+. Passez la souris sur le volume et sélectionnez *Modifier*.
+. Modifiez la taille et les balises selon vos besoins.
+. Sélectionnez *Appliquer*.
+
+
+
+
+== Modifier le niveau de service du volume
+
+Après avoir créé un volume, vous pouvez modifier le niveau de service à tout moment tant que le pool de capacité de destination existe déjà.
+
+.Étapes
+. Ouvrez le système.
+. Passez la souris sur le volume et sélectionnez *Modifier le niveau de service*.
+. Sélectionnez le pool de capacité qui fournit le niveau de service souhaité.
+. Sélectionnez *Modifier*.
+
+
+.Résultat
+Le volume est déplacé vers l’autre pool de capacité sans impact sur le volume.
+
+
+
+== Gérer les copies instantanées
+
+Les copies instantanées fournissent une copie ponctuelle de votre volume.  Créez des copies instantanées, restaurez les données sur un nouveau volume et supprimez les copies instantanées.
+
+.Étapes
+. Ouvrez le système.
+. Passez la souris sur le volume et choisissez l’une des options disponibles pour gérer les copies Snapshot :
++
+** *Créer une copie instantanée*
+** *Rétablir le volume sur Snapshot*
+** *Supprimer une copie d'instantané*
+
+
+. Suivez les instructions pour terminer l’action sélectionnée.
+
+
+
+
+== Supprimer des volumes
+
+Supprimez les volumes dont vous n’avez plus besoin.
+
+.Étapes
+. Ouvrez le système.
+. Passez la souris sur le volume puis sélectionnez *Supprimer*.
+. Confirmez que vous souhaitez supprimer le volume.
+
